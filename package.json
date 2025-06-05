@@ -1,0 +1,24 @@
+{
+  "name": "forceequalsai-linkedin-widget",
+  "version": "1.0.0",
+  "main": "content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanush200/Linked-Profile-Enhancer-Widget-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tanush200/Linked-Profile-Enhancer-Widget-/issues"
+  },
+  "homepage": "https://github.com/Tanush200/Linked-Profile-Enhancer-Widget-#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

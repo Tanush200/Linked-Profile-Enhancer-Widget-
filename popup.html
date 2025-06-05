@@ -1,23 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-        button {
-            padding: 10px;
-            background-color: #0073b1;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
+  <title>LinkedIn Widget Settings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f4f6f9;
+      width: 280px;
+    }
 
+    h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #0073b1;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #0073b1;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      background-color: #0073b1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background-color: #005f8d;
+    }
+
+    #toggle-btn {
+      background-color: #555;
+    }
+
+    #toggle-btn:hover {
+      background-color: #333;
+    }
+
+    .spacer {
+      height: 8px;
+    }
+  </style>
+</head>
 <body>
-    <button id="toggle-btn">Toggle Widget</button>
-    <script src="popup.js"></script>
+  <h2>Widget Settings</h2>
+
+  <label for="company">Company Name:</label>
+  <input id="company" placeholder="e.g. TechCorp" />
+
+  <label for="score">Match Score (%):</label>
+  <input id="score" type="number" placeholder="e.g. 86" />
+
+  <label for="status">Status:</label>
+  <input id="status" placeholder="e.g. Target" />
+
+  <button id="save-btn">Save & Refresh</button>
+  <button id="toggle-btn">Toggle Widget</button>
+
+  <script src="popup.js"></script>
 </body>
 </html>
