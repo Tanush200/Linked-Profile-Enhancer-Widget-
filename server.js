@@ -53,14 +53,13 @@
 const express = require("express");
 const cors = require("cors");
 
-// Initialize Express app
 const app = express();
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Database simulation (could be replaced with real DB)
+
 const profileDatabase = {
   "Tanush Saha": {
     companyName: "Tanush Tech Solutions",
@@ -85,7 +84,7 @@ const profileDatabase = {
   },
 };
 
-// Helper function to find profile (case-insensitive with partial matching)
+
 const findProfile = (name) => {
   const lowerName = name.toLowerCase();
   return Object.keys(profileDatabase).find((key) =>
@@ -93,7 +92,7 @@ const findProfile = (name) => {
   );
 };
 
-// API Endpoints
+
 app.get("/api/match", (req, res) => {
   try {
     const { name } = req.query;
@@ -115,7 +114,7 @@ app.get("/api/match", (req, res) => {
       });
     }
 
-    // Not found response
+   
     res.status(404).json({
       success: false,
       message: "Profile not found",
@@ -134,7 +133,7 @@ app.get("/api/match", (req, res) => {
   }
 });
 
-// Additional endpoint for bulk operations
+
 app.post("/api/profiles", (req, res) => {
   try {
     const { names } = req.body;
@@ -163,7 +162,7 @@ app.post("/api/profiles", (req, res) => {
   }
 });
 
-// Health check endpoint
+
 app.get("/health", (req, res) => {
   res.json({
     status: "OK",
@@ -173,7 +172,7 @@ app.get("/health", (req, res) => {
   });
 });
 
-// Error handling middleware
+
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({
@@ -182,7 +181,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Server configuration
+
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || "0.0.0.0";
 
@@ -196,7 +195,7 @@ app.listen(PORT, HOST, () => {
   `);
 });
 
-// Graceful shutdown
+
 process.on("SIGTERM", () => {
   console.log("Shutting down gracefully...");
   server.close(() => {
