@@ -1,5 +1,5 @@
 const data = {
-  companyName: "TechCorp",
+  companyName: "Tanush Saha",
   matchScore: 86,
   accountStatus: "Target",
 };
